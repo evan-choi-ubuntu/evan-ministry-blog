@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ko" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Evan의 사역 여정</title>
+<meta name="keywords" content="">
+<meta name="description" content="터미널에서 성경을 읽는 사역자: CLI 도구로 말씀과 가까워지기
+2025년 5월 29일 - 세 번째 이야기
+
+세 번의 각성, 하나의 여정
+첫 번째 글에서 나는 MSX 8비트 컴퓨터의 검은 화면에서 시작된 낭만을 잃고, 화려한 클라우드 생태계에 지쳐 우분투로 돌아온 이야기를 했다.
+두 번째 글에서는 Word와 Notion을 버리고 마크다운과 Obsidian으로 설교문을 작성하게 된 실용적 이유들을 나누었다.
+이제 세 번째 이야기다. 그 검은 터미널 화면에서 하나님의 말씀을 읽는다는 것에 대해.
+
+그날 밤, 터미널 앞에서
+우분투 설치 후 며칠이 지난 어느 저녁이었다. 설교 준비를 위해 성경을 펼쳐야 했는데, 문득 이런 생각이 들었다.">
+<meta name="author" content="Evan 목사">
+<link rel="canonical" href="http://localhost:1313/posts/linux-journey/draft_%ED%84%B0%EB%AF%B8%EB%84%90%EC%97%90%EC%84%9C-%EC%84%B1%EA%B2%BD%EC%9D%84-%EC%9D%BD%EB%8A%94-%EC%82%AC%EC%97%AD%EC%9E%90_cli-%EB%8F%84%EA%B5%AC%EB%A1%9C-%EB%A7%90%EC%94%80%EA%B3%BC-%EA%B0%80%EA%B9%8C%EC%9B%8C%EC%A7%80%EA%B8%B0/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5a2904636609c55b6f9345f4c5b65488c998fad83a2c720546aefb7ac22b926.css" integrity="sha256-paKQRjZgnFW2&#43;TRfTFtlSIyZj62DoscgVGrvt6wiuSY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ko" href="http://localhost:1313/posts/linux-journey/draft_%ED%84%B0%EB%AF%B8%EB%84%90%EC%97%90%EC%84%9C-%EC%84%B1%EA%B2%BD%EC%9D%84-%EC%9D%BD%EB%8A%94-%EC%82%AC%EC%97%AD%EC%9E%90_cli-%EB%8F%84%EA%B5%AC%EB%A1%9C-%EB%A7%90%EC%94%80%EA%B3%BC-%EA%B0%80%EA%B9%8C%EC%9B%8C%EC%A7%80%EA%B8%B0/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/posts/linux-journey/draft_%ED%84%B0%EB%AF%B8%EB%84%90%EC%97%90%EC%84%9C-%EC%84%B1%EA%B2%BD%EC%9D%84-%EC%9D%BD%EB%8A%94-%EC%82%AC%EC%97%AD%EC%9E%90_cli-%EB%8F%84%EA%B5%AC%EB%A1%9C-%EB%A7%90%EC%94%80%EA%B3%BC-%EA%B0%80%EA%B9%8C%EC%9B%8C%EC%A7%80%EA%B8%B0/">
+  <meta property="og:site_name" content="Evan의 사역 여정">
+  <meta property="og:title" content="Evan의 사역 여정">
+  <meta property="og:description" content="터미널에서 성경을 읽는 사역자: CLI 도구로 말씀과 가까워지기 2025년 5월 29일 - 세 번째 이야기
+세 번의 각성, 하나의 여정 첫 번째 글에서 나는 MSX 8비트 컴퓨터의 검은 화면에서 시작된 낭만을 잃고, 화려한 클라우드 생태계에 지쳐 우분투로 돌아온 이야기를 했다.
+두 번째 글에서는 Word와 Notion을 버리고 마크다운과 Obsidian으로 설교문을 작성하게 된 실용적 이유들을 나누었다.
+이제 세 번째 이야기다. 그 검은 터미널 화면에서 하나님의 말씀을 읽는다는 것에 대해.
+그날 밤, 터미널 앞에서 우분투 설치 후 며칠이 지난 어느 저녁이었다. 설교 준비를 위해 성경을 펼쳐야 했는데, 문득 이런 생각이 들었다.">
+  <meta property="og:locale" content="ko">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="터미널에서 성경을 읽는 사역자: CLI 도구로 말씀과 가까워지기
+2025년 5월 29일 - 세 번째 이야기
+
+세 번의 각성, 하나의 여정
+첫 번째 글에서 나는 MSX 8비트 컴퓨터의 검은 화면에서 시작된 낭만을 잃고, 화려한 클라우드 생태계에 지쳐 우분투로 돌아온 이야기를 했다.
+두 번째 글에서는 Word와 Notion을 버리고 마크다운과 Obsidian으로 설교문을 작성하게 된 실용적 이유들을 나누었다.
+이제 세 번째 이야기다. 그 검은 터미널 화면에서 하나님의 말씀을 읽는다는 것에 대해.
+
+그날 밤, 터미널 앞에서
+우분투 설치 후 며칠이 지난 어느 저녁이었다. 설교 준비를 위해 성경을 펼쳐야 했는데, 문득 이런 생각이 들었다.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "",
+      "item": "http://localhost:1313/posts/linux-journey/draft_%ED%84%B0%EB%AF%B8%EB%84%90%EC%97%90%EC%84%9C-%EC%84%B1%EA%B2%BD%EC%9D%84-%EC%9D%BD%EB%8A%94-%EC%82%AC%EC%97%AD%EC%9E%90_cli-%EB%8F%84%EA%B5%AC%EB%A1%9C-%EB%A7%90%EC%94%80%EA%B3%BC-%EA%B0%80%EA%B9%8C%EC%9B%8C%EC%A7%80%EA%B8%B0/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "name": "",
+  "description": "터미널에서 성경을 읽는 사역자: CLI 도구로 말씀과 가까워지기 2025년 5월 29일 - 세 번째 이야기\n세 번의 각성, 하나의 여정 첫 번째 글에서 나는 MSX 8비트 컴퓨터의 검은 화면에서 시작된 낭만을 잃고, 화려한 클라우드 생태계에 지쳐 우분투로 돌아온 이야기를 했다.\n두 번째 글에서는 Word와 Notion을 버리고 마크다운과 Obsidian으로 설교문을 작성하게 된 실용적 이유들을 나누었다.\n이제 세 번째 이야기다. 그 검은 터미널 화면에서 하나님의 말씀을 읽는다는 것에 대해.\n그날 밤, 터미널 앞에서 우분투 설치 후 며칠이 지난 어느 저녁이었다. 설교 준비를 위해 성경을 펼쳐야 했는데, 문득 이런 생각이 들었다.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "터미널에서 성경을 읽는 사역자: CLI 도구로 말씀과 가까워지기 2025년 5월 29일 - 세 번째 이야기\n세 번의 각성, 하나의 여정 첫 번째 글에서 나는 MSX 8비트 컴퓨터의 검은 화면에서 시작된 낭만을 잃고, 화려한 클라우드 생태계에 지쳐 우분투로 돌아온 이야기를 했다.\n두 번째 글에서는 Word와 Notion을 버리고 마크다운과 Obsidian으로 설교문을 작성하게 된 실용적 이유들을 나누었다.\n이제 세 번째 이야기다. 그 검은 터미널 화면에서 하나님의 말씀을 읽는다는 것에 대해.\n그날 밤, 터미널 앞에서 우분투 설치 후 며칠이 지난 어느 저녁이었다. 설교 준비를 위해 성경을 펼쳐야 했는데, 문득 이런 생각이 들었다.\n“내가 MSX 시절 그렇게 그리워했던 그 검은 화면… 거기서 성경을 읽을 수는 없을까?”\nFirefox를 열어 온라인 성경을 보려다가 멈췄다. 그 화려한 웹사이트들, 광고 배너들, 복잡한 인터페이스들이 갑자기 너무 피곤하게 느껴졌다.\n그래서 터미널을 열었다.\n1 evan@ubuntu:~$ apt search bible CLI 성경의 발견 검색 결과에 나타난 것들을 보고 나는 깜짝 놀랐다.\n1. Bible.Org CLI 1 sudo apt install bible-kjv 설치 후 실행해보니:\n1 2 3 4 5 6 7 8 9 10 11 12 evan@ubuntu:~$ bible Welcome to the Bible reader! Type 'help' for commands. bible\u003e John 3:16 John 3:16 - For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life. bible\u003e search love Searching for 'love'... Found 442 verses containing 'love' 2. BibleTime CLI 더 고급 기능을 원해서 설치한 또 다른 도구:\n1 sudo apt install bibletime 3. Bible Gateway CLI (Python) 1 2 pip install bible-gateway bg John 3:16 그런데 이 모든 도구들을 사용하면서 느낀 것은… 단순히 도구의 편리함이 아니었다.\n검은 화면 위의 하얀 글자, 그 거룩함 터미널에서 성경을 읽기 시작하면서 경험한 것들:\n1. 온전한 집중 1 2 3 4 bible\u003e Romans 8:28 Romans 8:28 - And we know that all things work together for good to them that love God, to them who are the called according to his purpose. 화려한 GUI도, 광고도, 알림도 없었다. 오직 검은 화면과 하얀 글자뿐. 첫 번째 글에서 그리워했던 그 MSX의 단순함이 거기 있었다.\n브라우저에서 성경을 읽을 때는 항상 다른 탭들이 신경 쓰였다. 메일 알림, 유튜브 추천, 소셜미디어… 하지만 터미널에서는 오직 말씀만 있었다.\n2. 직접적인 대화 1 2 3 bible\u003e search \"be still\" Psalm 46:10 - Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth. 마치 하나님과 일대일로 대화하는 느낌이었다. 중간에 끼어드는 광고도, 화려한 디자인도 없이 순수한 텍스트로 된 하나님의 말씀과 마주하는 경험.\n3. 검색의 순수함 웹사이트에서 성경을 검색할 때는 항상 무언가 다른 것들이 함께 나타난다. 관련 기사, 추천 영상, 광고… 하지만 CLI에서는:\n1 2 3 4 5 6 7 8 9 10 11 12 bible\u003e search \"fear not\" Found 63 verses containing 'fear not' Isaiah 41:10 - Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness. Isaiah 43:1 - But now thus saith the LORD that created thee, O Jacob, and he that formed thee, O Israel, Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine. 순수한 검색 결과만 나타난다. 검색하고자 했던 바로 그 말씀들만.\n설교 준비가 또 다시 변했다 두 번째 글에서 설명했듯이, 마크다운과 Obsidian으로 설교 준비 시간이 30% 단축되었다고 했다. 그런데 터미널 성경까지 더해지니 더욱 놀라운 일이 일어났다.\nBefore: 웹 기반 성경 연구 브라우저 열기 (로딩 시간) 성경 사이트 접속 (광고 로딩) 원하는 구절 검색 여러 번역본 비교를 위해 탭 여러 개 열기 관련 구절 찾기 위해 또 다른 검색 산만한 환경에서 집중력 분산 중요한 구절들 복사해서 메모장에 정리 총 소요 시간: 약 25분\nAfter: 터미널 + Obsidian 연동 터미널에서 즉시 구절 검색 1 bible\u003e John 3:16 관련 구절 즉시 검색 1 bible\u003e search \"eternal life\" 중요한 구절들을 바로 Obsidian 노트에 기록 1 bible\u003e John 3:16 \u003e\u003e /srv/admin_hub/성경연구/영생.md 온전한 집중 상태에서 묵상 Obsidian에서 [[요한복음3장16절]] 링크 생성 총 소요 시간: 약 12분\n52% 시간 단축! 하지만 더 중요한 것은 집중도의 향상이었다.\n나만의 CLI 성경 연구 워크플로우 몇 달간의 시행착오를 거쳐 정착된 나만의 방법:\n1. 매일 아침 묵상 루틴 1 2 3 4 5 6 7 8 9 10 11 12 # 6:30 AM - 하루를 터미널로 시작 evan@ubuntu:~$ cd /srv/admin_hub/묵상일기 evan@ubuntu:묵상일기$ bible bible\u003e random verse Proverbs 3:5-6 - Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths. # 즉시 오늘의 묵상 파일 생성 bible\u003e exit evan@ubuntu:묵상일기$ vim 2025-05-29-잠언3장5-6절.md 2. 설교 본문 연구 1 2 3 4 5 6 7 8 9 # 이번 주 설교 본문이 로마서 8장이라면 bible\u003e Romans 8 # 전체 장 읽기 bible\u003e search \"Spirit\" Romans 8 # 로마서 8장 내에서 \"성령\" 관련 구절 찾기 bible\u003e cross-reference Romans 8:28 # 교차 참조 구절들 확인 3. 주제별 연구 1 2 3 4 5 6 7 8 bible\u003e search \"love\" | head -20 # \"사랑\" 관련 구절 상위 20개 bible\u003e search \"love\" Gospel # 복음서에서만 \"사랑\" 검색 bible\u003e concordance love # \"사랑\"에 대한 성경 사전 정보 기술과 영성의 만남: 더 깊은 의미 터미널에서 성경을 읽는 것이 단순히 도구의 선택을 넘어 영성의 차원에서 가져다준 변화들:\n1. 디지털 금식의 은혜 웹브라우저의 모든 유혹들로부터 벗어나 순수한 텍스트와 마주하는 시간. 이것은 마치 광야에서 하나님과 만나는 경험과 같았다.\n2. 명령어와 기도의 유사성 1 bible\u003e search \"comfort\" 이런 명령어를 입력할 때마다 느끼는 것은, 이것이 마치 하나님께 구하는 기도와 같다는 것이다.\n“하나님, 위로에 대한 말씀을 보여주세요.”\n그리고 즉시 응답이 온다:\n1 2 3 2 Corinthians 1:3 - Blessed be God, even the Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort; 3. 검은 화면의 영성 첫 번째 글에서 언급했듯이, 나는 화려한 GUI에 지쳐 단색 텍스트를 그리워했다. 터미널의 검은 화면은 묵상과 기도를 위한 성소가 되었다.\n외부의 모든 자극을 차단하고, 오직 하나님의 말씀과 나 사이의 거룩한 정적 속에서 만나는 시간.\n실용적 팁들 몇 달간의 경험을 통해 정리한 터미널 성경 읽기 팁들:\n1. 필수 설치 도구들 1 2 3 4 5 6 7 8 9 10 11 # KJV 성경 (기본) sudo apt install bible-kjv # 히브리어/그리스어 도구 sudo apt install biblical-hebrew # 성경 사전 sudo apt install bible-dict # 교차 참조 도구 pip install bible-cross-reference 2. 유용한 단축키 설정 1 2 3 4 5 6 7 8 9 # ~/.bashrc에 추가 alias morning=\"bible random\" alias study=\"bible search\" alias verses=\"bible\" # 빠른 검색을 위한 함수 biblesearch() { bible search \"$1\" | head -10 } 3. Obsidian 연동 자동화 1 2 3 4 5 6 # 중요한 구절을 자동으로 Obsidian에 저장 bible_to_obsidian() { echo \"## $(date '+%Y-%m-%d %H:%M')\" \u003e\u003e /srv/admin_hub/성경구절모음.md bible \"$1\" \u003e\u003e /srv/admin_hub/성경구절모음.md echo \"\" \u003e\u003e /srv/admin_hub/성경구절모음.md } 4. 묵상 일기 자동화 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 # 매일 아침 묵상 파일 생성 morning_devotion() { DATE=$(date '+%Y-%m-%d') FILE=\"/srv/admin_hub/묵상일기/${DATE}-묵상.md\" echo \"# ${DATE} 묵상\" \u003e \"$FILE\" echo \"\" \u003e\u003e \"$FILE\" echo \"## 오늘의 말씀\" \u003e\u003e \"$FILE\" bible random \u003e\u003e \"$FILE\" echo \"\" \u003e\u003e \"$FILE\" echo \"## 묵상과 기도\" \u003e\u003e \"$FILE\" echo \"\" \u003e\u003e \"$FILE\" vim \"$FILE\" } 공동체와의 나눔 혼자만의 경험으로 끝내지 않고, 교회 청년들과도 나누기 시작했다.\n청년부 성경공부 혁신 1 2 3 4 5 6 7 8 # 청년부 모임에서 \"오늘은 '사랑'에 대해 공부해봅시다.\" # 프로젝터로 터미널 화면 공유 bible\u003e search \"love\" Gospel | head -5 # 실시간으로 관련 구절들이 나타나는 것을 보며 # 청년들의 집중도가 확연히 달라졌다 청년들의 반응:\n“와, 성경이 데이터베이스 같아요!” “이렇게 빠르게 찾을 수 있다니…” “스마트폰보다 집중이 잘 돼요” 설교 중 실시간 검색 설교 도중에도 터미널을 활용:\n1 2 # 설교 중에 갑자기 관련 구절이 생각날 때 bible\u003e search \"peace\" | grep Jesus 즉시 관련 구절을 찾아 회중과 나눌 수 있게 되었다.\n오픈소스 정신과 성경의 만남 이 모든 과정에서 깨달은 것은 오픈소스 정신과 성경의 공통점이었다.\n무료로 공개된 하나님의 말씀 1 2 3 bible\u003e John 3:16 # 이 명령어로 나오는 구절은 완전히 무료다 # 구독료도, 광고도 없다 하나님의 말씀이 **“값없이 받았으니 값없이 주라”**는 원칙처럼, 터미널의 성경 도구들도 모두 무료로 제공된다.\n투명하고 단순한 접근 웹사이트의 복잡한 인터페이스나 상업적 목적이 개입되지 않은, 순수한 텍스트로서의 하나님의 말씀.\n전 세계 개발자들의 헌신 이 CLI 도구들을 만든 개발자들은 아무런 대가 없이 하나님의 말씀을 더 쉽게 접할 수 있도록 헌신했다. 이것이야말로 진정한 디지털 선교가 아닐까?\n지금도 계속되는 여정 첫 번째 글의 MSX 추억에서 시작되어, 두 번째 글의 마크다운 전환을 거쳐, 이제 터미널에서 성경을 읽는 이 세 번째 여정까지.\n모든 것이 하나로 연결되어 있다:\n단순함에 대한 그리움 → 터미널의 검은 화면 진정한 소유권에 대한 갈망 → 로컬에 저장된 성경 텍스트 연결된 지식에 대한 열망 → CLI 도구들과 Obsidian의 만남 복음적 가치와의 일치 → 오픈소스 정신과 “값없이 주라\"는 말씀 매일 아침의 고백 이제 매일 아침 터미널을 열며 이렇게 기도한다:\n1 2 3 evan@ubuntu:~$ bible bible\u003e random verse 어떤 구절이 나올지 모르지만, 그 검은 화면 위의 하얀 글자들을 통해 하나님이 오늘 내게 주시는 말씀을 기다린다.\nMSX 앞에서 꿈꿨던 그 순수한 기대감이, 이제는 하나님의 말씀을 향한 갈망으로 승화되었다.\n마무리: 계속 이어질 이야기 이 시리즈는 여기서 끝나지 않는다.\n다음에는 Git으로 설교문을 버전 관리하는 이야기, Hugo로 교회 웹사이트를 만든 경험, AI 도구들을 사역에 접목한 시행착오들…\n모든 이야기가 하나의 큰 주제로 연결되어 있다:\n“기술과 복음이 만나는 지점에서, 어떻게 더 순수하고 효과적으로 하나님을 섬길 것인가?”\nMSX에서 시작된 여정이 계속되고 있다. 그리고 이 여정의 끝에는 분명 더 아름다운 사역의 모습이 기다리고 있을 것이다.\n“주의 말씀은 내 발에 등이요 내 길에 빛이니이다” (시편 119:105)\n1 2 3 4 evan@ubuntu:~$ bible Psalm 119:105 Psalm 119:105 - Thy word is a lamp unto my feet, and a light unto my path. evan@ubuntu:~$ # 오늘도 주님의 말씀으로 시작합니다. 이 글은 Ubuntu 22.04의 터미널에서 vim으로 작성되었으며, bible-kjv와 Obsidian을 연동하여 완성되었습니다. 모든 CLI 도구 설정법과 스크립트는 Creative Commons 라이선스로 공유됩니다.\n다음 글 예고: “Git으로 설교문을 버전 관리하는 사역자: 하나님의 말씀도 커밋한다”\n",
+  "wordCount" : "1578",
+  "inLanguage": "ko",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Evan 목사"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/linux-journey/draft_%ED%84%B0%EB%AF%B8%EB%84%90%EC%97%90%EC%84%9C-%EC%84%B1%EA%B2%BD%EC%9D%84-%EC%9D%BD%EB%8A%94-%EC%82%AC%EC%97%AD%EC%9E%90_cli-%EB%8F%84%EA%B5%AC%EB%A1%9C-%EB%A7%90%EC%94%80%EA%B3%BC-%EA%B0%80%EA%B9%8C%EC%9B%8C%EC%A7%80%EA%B8%B0/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Evan의 사역 여정",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Evan의 사역 여정 (Alt + H)">Evan의 사역 여정</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="http://localhost:1313/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/categories/linux-journey/" title="리눅스여정">
+                    <span>리눅스여정</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/memories/" title="추억발굴">
+                    <span>추억발굴</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/book-reviews/" title="독서서평">
+                    <span>독서서평</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/sermons/" title="설교문">
+                    <span>설교문</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/bible-studies/" title="성경교회사">
+                    <span>성경교회사</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/life-stories/" title="삶의이야기">
+                    <span>삶의이야기</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="소개">
+                    <span>소개</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">홈</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      
+    </h1>
+    <div class="post-meta">8 분&nbsp;·&nbsp;1578 단어&nbsp;·&nbsp;Evan 목사
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="터미널에서-성경을-읽는-사역자-cli-도구로-말씀과-가까워지기">터미널에서 성경을 읽는 사역자: CLI 도구로 말씀과 가까워지기<a hidden class="anchor" aria-hidden="true" href="#터미널에서-성경을-읽는-사역자-cli-도구로-말씀과-가까워지기">#</a></h1>
+<p><em>2025년 5월 29일 - 세 번째 이야기</em></p>
+<hr>
+<h2 id="세-번의-각성-하나의-여정">세 번의 각성, 하나의 여정<a hidden class="anchor" aria-hidden="true" href="#세-번의-각성-하나의-여정">#</a></h2>
+<p><a href="%EB%A7%81%ED%81%AC">첫 번째 글</a>에서 나는 MSX 8비트 컴퓨터의 검은 화면에서 시작된 낭만을 잃고, 화려한 클라우드 생태계에 지쳐 우분투로 돌아온 이야기를 했다.</p>
+<p><a href="%EB%A7%81%ED%81%AC">두 번째 글</a>에서는 Word와 Notion을 버리고 마크다운과 Obsidian으로 설교문을 작성하게 된 실용적 이유들을 나누었다.</p>
+<p>이제 세 번째 이야기다. 그 검은 터미널 화면에서 <strong>하나님의 말씀을 읽는다는 것</strong>에 대해.</p>
+<hr>
+<h2 id="그날-밤-터미널-앞에서">그날 밤, 터미널 앞에서<a hidden class="anchor" aria-hidden="true" href="#그날-밤-터미널-앞에서">#</a></h2>
+<p>우분투 설치 후 며칠이 지난 어느 저녁이었다. 설교 준비를 위해 성경을 펼쳐야 했는데, 문득 이런 생각이 들었다.</p>
+<p><em>&ldquo;내가 MSX 시절 그렇게 그리워했던 그 검은 화면&hellip; 거기서 성경을 읽을 수는 없을까?&rdquo;</em></p>
+<p>Firefox를 열어 온라인 성경을 보려다가 멈췄다. 그 화려한 웹사이트들, 광고 배너들, 복잡한 인터페이스들이 갑자기 너무 피곤하게 느껴졌다.</p>
+<p>그래서 터미널을 열었다.</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evan@ubuntu:~$ apt search bible
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="cli-성경의-발견">CLI 성경의 발견<a hidden class="anchor" aria-hidden="true" href="#cli-성경의-발견">#</a></h2>
+<p>검색 결과에 나타난 것들을 보고 나는 깜짝 놀랐다.</p>
+<h3 id="1-bibleorg-cli"><strong>1. Bible.Org CLI</strong><a hidden class="anchor" aria-hidden="true" href="#1-bibleorg-cli">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install bible-kjv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>설치 후 실행해보니:</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evan@ubuntu:~$ bible
+</span></span><span style="display:flex;"><span>Welcome to the Bible reader!
+</span></span><span style="display:flex;"><span>Type <span style="color:#a5d6ff">&#39;help&#39;</span> <span style="color:#ff7b72">for</span> commands.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bible&gt; John 3:16
+</span></span><span style="display:flex;"><span>John 3:16 - For God so loved the world, that he gave his only 
+</span></span><span style="display:flex;"><span>begotten Son, that whosoever believeth in him should not 
+</span></span><span style="display:flex;"><span>perish, but have everlasting life.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bible&gt; search love
+</span></span><span style="display:flex;"><span>Searching <span style="color:#ff7b72">for</span> <span style="color:#a5d6ff">&#39;love&#39;</span>...
+</span></span><span style="display:flex;"><span>Found <span style="color:#a5d6ff">442</span> verses containing <span style="color:#a5d6ff">&#39;love&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-bibletime-cli"><strong>2. BibleTime CLI</strong><a hidden class="anchor" aria-hidden="true" href="#2-bibletime-cli">#</a></h3>
+<p>더 고급 기능을 원해서 설치한 또 다른 도구:</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install bibletime
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-bible-gateway-cli-python"><strong>3. Bible Gateway CLI (Python)</strong><a hidden class="anchor" aria-hidden="true" href="#3-bible-gateway-cli-python">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install bible-gateway
+</span></span><span style="display:flex;"><span>bg John 3:16
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>그런데 이 모든 도구들을 사용하면서 느낀 것은&hellip; <strong>단순히 도구의 편리함이 아니었다</strong>.</p>
+<hr>
+<h2 id="검은-화면-위의-하얀-글자-그-거룩함">검은 화면 위의 하얀 글자, 그 거룩함<a hidden class="anchor" aria-hidden="true" href="#검은-화면-위의-하얀-글자-그-거룩함">#</a></h2>
+<p>터미널에서 성경을 읽기 시작하면서 경험한 것들:</p>
+<h3 id="1-온전한-집중"><strong>1. 온전한 집중</strong><a hidden class="anchor" aria-hidden="true" href="#1-온전한-집중">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bible&gt; Romans 8:28
+</span></span><span style="display:flex;"><span>Romans 8:28 - And we know that all things work together 
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">for</span> good to them that love God, to them who are the called 
+</span></span><span style="display:flex;"><span>according to his purpose.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>화려한 GUI도, 광고도, 알림도 없었다. 오직 <strong>검은 화면과 하얀 글자뿐</strong>. <a href="%EB%A7%81%ED%81%AC">첫 번째 글에서 그리워했던</a> 그 MSX의 단순함이 거기 있었다.</p>
+<p>브라우저에서 성경을 읽을 때는 항상 다른 탭들이 신경 쓰였다. 메일 알림, 유튜브 추천, 소셜미디어&hellip; 하지만 터미널에서는 <strong>오직 말씀만 있었다</strong>.</p>
+<h3 id="2-직접적인-대화"><strong>2. 직접적인 대화</strong><a hidden class="anchor" aria-hidden="true" href="#2-직접적인-대화">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bible&gt; search <span style="color:#a5d6ff">&#34;be still&#34;</span>
+</span></span><span style="display:flex;"><span>Psalm 46:10 - Be still, and know that I am God: I will be 
+</span></span><span style="display:flex;"><span>exalted among the heathen, I will be exalted in the earth.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>마치 하나님과 일대일로 대화하는 느낌이었다. 중간에 끼어드는 광고도, 화려한 디자인도 없이 <strong>순수한 텍스트로 된 하나님의 말씀</strong>과 마주하는 경험.</p>
+<h3 id="3-검색의-순수함"><strong>3. 검색의 순수함</strong><a hidden class="anchor" aria-hidden="true" href="#3-검색의-순수함">#</a></h3>
+<p>웹사이트에서 성경을 검색할 때는 항상 무언가 다른 것들이 함께 나타난다. 관련 기사, 추천 영상, 광고&hellip; 하지만 CLI에서는:</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bible&gt; search <span style="color:#a5d6ff">&#34;fear not&#34;</span>
+</span></span><span style="display:flex;"><span>Found <span style="color:#a5d6ff">63</span> verses containing <span style="color:#a5d6ff">&#39;fear not&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Isaiah 41:10 - Fear thou not; <span style="color:#ff7b72">for</span> I am with thee: be not 
+</span></span><span style="display:flex;"><span>dismayed; <span style="color:#ff7b72">for</span> I am thy God: I will strengthen thee; yea, 
+</span></span><span style="display:flex;"><span>I will help thee; yea, I will uphold thee with the right 
+</span></span><span style="display:flex;"><span>hand of my righteousness.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Isaiah 43:1 - But now thus saith the LORD that created thee, 
+</span></span><span style="display:flex;"><span>O Jacob, and he that formed thee, O Israel, Fear not: <span style="color:#ff7b72">for</span> 
+</span></span><span style="display:flex;"><span>I have redeemed thee, I have called thee by thy name; 
+</span></span><span style="display:flex;"><span>thou art mine.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>순수한 검색 결과만</strong> 나타난다. 검색하고자 했던 바로 그 말씀들만.</p>
+<hr>
+<h2 id="설교-준비가-또-다시-변했다">설교 준비가 또 다시 변했다<a hidden class="anchor" aria-hidden="true" href="#설교-준비가-또-다시-변했다">#</a></h2>
+<p><a href="%EB%A7%81%ED%81%AC">두 번째 글에서 설명했듯이</a>, 마크다운과 Obsidian으로 설교 준비 시간이 30% 단축되었다고 했다. 그런데 터미널 성경까지 더해지니 더욱 놀라운 일이 일어났다.</p>
+<h3 id="before-웹-기반-성경-연구"><strong>Before: 웹 기반 성경 연구</strong><a hidden class="anchor" aria-hidden="true" href="#before-웹-기반-성경-연구">#</a></h3>
+<ol>
+<li>브라우저 열기 (로딩 시간)</li>
+<li>성경 사이트 접속 (광고 로딩)</li>
+<li>원하는 구절 검색</li>
+<li>여러 번역본 비교를 위해 탭 여러 개 열기</li>
+<li>관련 구절 찾기 위해 또 다른 검색</li>
+<li>산만한 환경에서 집중력 분산</li>
+<li>중요한 구절들 복사해서 메모장에 정리</li>
+</ol>
+<p><strong>총 소요 시간: 약 25분</strong></p>
+<h3 id="after-터미널--obsidian-연동"><strong>After: 터미널 + Obsidian 연동</strong><a hidden class="anchor" aria-hidden="true" href="#after-터미널--obsidian-연동">#</a></h3>
+<ol>
+<li>터미널에서 즉시 구절 검색</li>
+</ol>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bible&gt; John 3:16
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>관련 구절 즉시 검색</li>
+</ol>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bible&gt; search <span style="color:#a5d6ff">&#34;eternal life&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>중요한 구절들을 바로 Obsidian 노트에 기록</li>
+</ol>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bible&gt; John 3:16 &gt;&gt; /srv/admin_hub/성경연구/영생.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>온전한 집중 상태에서 묵상</li>
+<li>Obsidian에서 <code>[[요한복음3장16절]]</code> 링크 생성</li>
+</ol>
+<p><strong>총 소요 시간: 약 12분</strong></p>
+<p><strong>52% 시간 단축!</strong> 하지만 더 중요한 것은 <strong>집중도의 향상</strong>이었다.</p>
+<hr>
+<h2 id="나만의-cli-성경-연구-워크플로우">나만의 CLI 성경 연구 워크플로우<a hidden class="anchor" aria-hidden="true" href="#나만의-cli-성경-연구-워크플로우">#</a></h2>
+<p>몇 달간의 시행착오를 거쳐 정착된 나만의 방법:</p>
+<h3 id="1-매일-아침-묵상-루틴"><strong>1. 매일 아침 묵상 루틴</strong><a hidden class="anchor" aria-hidden="true" href="#1-매일-아침-묵상-루틴">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 6:30 AM - 하루를 터미널로 시작</span>
+</span></span><span style="display:flex;"><span>evan@ubuntu:~$ cd /srv/admin_hub/묵상일기
+</span></span><span style="display:flex;"><span>evan@ubuntu:묵상일기$ bible
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bible&gt; random verse
+</span></span><span style="display:flex;"><span>Proverbs 3:5-6 - Trust in the LORD with all thine heart; 
+</span></span><span style="display:flex;"><span>and lean not unto thine own understanding. In all thy ways 
+</span></span><span style="display:flex;"><span>acknowledge him, and he shall direct thy paths.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 즉시 오늘의 묵상 파일 생성</span>
+</span></span><span style="display:flex;"><span>bible&gt; exit
+</span></span><span style="display:flex;"><span>evan@ubuntu:묵상일기$ vim 2025-05-29-잠언3장5-6절.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-설교-본문-연구"><strong>2. 설교 본문 연구</strong><a hidden class="anchor" aria-hidden="true" href="#2-설교-본문-연구">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 이번 주 설교 본문이 로마서 8장이라면</span>
+</span></span><span style="display:flex;"><span>bible&gt; Romans <span style="color:#a5d6ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 전체 장 읽기</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bible&gt; search <span style="color:#a5d6ff">&#34;Spirit&#34;</span> Romans <span style="color:#a5d6ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 로마서 8장 내에서 &#34;성령&#34; 관련 구절 찾기</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bible&gt; cross-reference Romans 8:28
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 교차 참조 구절들 확인</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-주제별-연구"><strong>3. 주제별 연구</strong><a hidden class="anchor" aria-hidden="true" href="#3-주제별-연구">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bible&gt; search <span style="color:#a5d6ff">&#34;love&#34;</span> | head -20
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># &#34;사랑&#34; 관련 구절 상위 20개</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bible&gt; search <span style="color:#a5d6ff">&#34;love&#34;</span> Gospel
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 복음서에서만 &#34;사랑&#34; 검색</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bible&gt; concordance love
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># &#34;사랑&#34;에 대한 성경 사전 정보</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="기술과-영성의-만남-더-깊은-의미">기술과 영성의 만남: 더 깊은 의미<a hidden class="anchor" aria-hidden="true" href="#기술과-영성의-만남-더-깊은-의미">#</a></h2>
+<p>터미널에서 성경을 읽는 것이 단순히 <strong>도구의 선택</strong>을 넘어 <strong>영성의 차원</strong>에서 가져다준 변화들:</p>
+<h3 id="1-디지털-금식의-은혜"><strong>1. 디지털 금식의 은혜</strong><a hidden class="anchor" aria-hidden="true" href="#1-디지털-금식의-은혜">#</a></h3>
+<p>웹브라우저의 모든 유혹들로부터 벗어나 <strong>순수한 텍스트와 마주하는 시간</strong>. 이것은 마치 광야에서 하나님과 만나는 경험과 같았다.</p>
+<h3 id="2-명령어와-기도의-유사성"><strong>2. 명령어와 기도의 유사성</strong><a hidden class="anchor" aria-hidden="true" href="#2-명령어와-기도의-유사성">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bible&gt; search <span style="color:#a5d6ff">&#34;comfort&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>이런 명령어를 입력할 때마다 느끼는 것은, 이것이 마치 <strong>하나님께 구하는 기도</strong>와 같다는 것이다.</p>
+<p>&ldquo;하나님, 위로에 대한 말씀을 보여주세요.&rdquo;</p>
+<p>그리고 즉시 응답이 온다:</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>2 Corinthians 1:3 - Blessed be God, even the Father of our 
+</span></span><span style="display:flex;"><span>Lord Jesus Christ, the Father of mercies, and the God of 
+</span></span><span style="display:flex;"><span>all comfort;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-검은-화면의-영성"><strong>3. 검은 화면의 영성</strong><a hidden class="anchor" aria-hidden="true" href="#3-검은-화면의-영성">#</a></h3>
+<p><a href="%EB%A7%81%ED%81%AC">첫 번째 글에서 언급했듯이</a>, 나는 화려한 GUI에 지쳐 단색 텍스트를 그리워했다. 터미널의 검은 화면은 <strong>묵상과 기도를 위한 성소</strong>가 되었다.</p>
+<p>외부의 모든 자극을 차단하고, 오직 하나님의 말씀과 나 사이의 <strong>거룩한 정적</strong> 속에서 만나는 시간.</p>
+<hr>
+<h2 id="실용적-팁들">실용적 팁들<a hidden class="anchor" aria-hidden="true" href="#실용적-팁들">#</a></h2>
+<p>몇 달간의 경험을 통해 정리한 터미널 성경 읽기 팁들:</p>
+<h3 id="1-필수-설치-도구들"><strong>1. 필수 설치 도구들</strong><a hidden class="anchor" aria-hidden="true" href="#1-필수-설치-도구들">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># KJV 성경 (기본)</span>
+</span></span><span style="display:flex;"><span>sudo apt install bible-kjv
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 히브리어/그리스어 도구</span>
+</span></span><span style="display:flex;"><span>sudo apt install biblical-hebrew
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 성경 사전</span>
+</span></span><span style="display:flex;"><span>sudo apt install bible-dict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 교차 참조 도구</span>
+</span></span><span style="display:flex;"><span>pip install bible-cross-reference
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-유용한-단축키-설정"><strong>2. 유용한 단축키 설정</strong><a hidden class="anchor" aria-hidden="true" href="#2-유용한-단축키-설정">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># ~/.bashrc에 추가</span>
+</span></span><span style="display:flex;"><span>alias <span style="color:#79c0ff">morning</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;bible random&#34;</span>
+</span></span><span style="display:flex;"><span>alias <span style="color:#79c0ff">study</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;bible search&#34;</span>
+</span></span><span style="display:flex;"><span>alias <span style="color:#79c0ff">verses</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;bible&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 빠른 검색을 위한 함수</span>
+</span></span><span style="display:flex;"><span>biblesearch<span style="color:#ff7b72;font-weight:bold">()</span> <span style="color:#ff7b72;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    bible search <span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">$1</span><span style="color:#a5d6ff">&#34;</span> | head -10
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-obsidian-연동-자동화"><strong>3. Obsidian 연동 자동화</strong><a hidden class="anchor" aria-hidden="true" href="#3-obsidian-연동-자동화">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 중요한 구절을 자동으로 Obsidian에 저장</span>
+</span></span><span style="display:flex;"><span>bible_to_obsidian<span style="color:#ff7b72;font-weight:bold">()</span> <span style="color:#ff7b72;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#a5d6ff">&#34;## </span><span style="color:#ff7b72">$(</span>date <span style="color:#a5d6ff">&#39;+%Y-%m-%d %H:%M&#39;</span><span style="color:#ff7b72">)</span><span style="color:#a5d6ff">&#34;</span> &gt;&gt; /srv/admin_hub/성경구절모음.md
+</span></span><span style="display:flex;"><span>    bible <span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">$1</span><span style="color:#a5d6ff">&#34;</span> &gt;&gt; /srv/admin_hub/성경구절모음.md
+</span></span><span style="display:flex;"><span>    echo <span style="color:#a5d6ff">&#34;&#34;</span> &gt;&gt; /srv/admin_hub/성경구절모음.md
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4-묵상-일기-자동화"><strong>4. 묵상 일기 자동화</strong><a hidden class="anchor" aria-hidden="true" href="#4-묵상-일기-자동화">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 매일 아침 묵상 파일 생성</span>
+</span></span><span style="display:flex;"><span>morning_devotion<span style="color:#ff7b72;font-weight:bold">()</span> <span style="color:#ff7b72;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#79c0ff">DATE</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#ff7b72">$(</span>date <span style="color:#a5d6ff">&#39;+%Y-%m-%d&#39;</span><span style="color:#ff7b72">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#79c0ff">FILE</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;/srv/admin_hub/묵상일기/</span><span style="color:#a5d6ff">${</span><span style="color:#79c0ff">DATE</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">-묵상.md&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    echo <span style="color:#a5d6ff">&#34;# </span><span style="color:#a5d6ff">${</span><span style="color:#79c0ff">DATE</span><span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> 묵상&#34;</span> &gt; <span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">$FILE</span><span style="color:#a5d6ff">&#34;</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#a5d6ff">&#34;&#34;</span> &gt;&gt; <span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">$FILE</span><span style="color:#a5d6ff">&#34;</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#a5d6ff">&#34;## 오늘의 말씀&#34;</span> &gt;&gt; <span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">$FILE</span><span style="color:#a5d6ff">&#34;</span>
+</span></span><span style="display:flex;"><span>    bible random &gt;&gt; <span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">$FILE</span><span style="color:#a5d6ff">&#34;</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#a5d6ff">&#34;&#34;</span> &gt;&gt; <span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">$FILE</span><span style="color:#a5d6ff">&#34;</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#a5d6ff">&#34;## 묵상과 기도&#34;</span> &gt;&gt; <span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">$FILE</span><span style="color:#a5d6ff">&#34;</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#a5d6ff">&#34;&#34;</span> &gt;&gt; <span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">$FILE</span><span style="color:#a5d6ff">&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    vim <span style="color:#a5d6ff">&#34;</span><span style="color:#79c0ff">$FILE</span><span style="color:#a5d6ff">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="공동체와의-나눔">공동체와의 나눔<a hidden class="anchor" aria-hidden="true" href="#공동체와의-나눔">#</a></h2>
+<p>혼자만의 경험으로 끝내지 않고, 교회 청년들과도 나누기 시작했다.</p>
+<h3 id="청년부-성경공부-혁신"><strong>청년부 성경공부 혁신</strong><a hidden class="anchor" aria-hidden="true" href="#청년부-성경공부-혁신">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 청년부 모임에서</span>
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">&#34;오늘은 &#39;사랑&#39;에 대해 공부해봅시다.&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 프로젝터로 터미널 화면 공유</span>
+</span></span><span style="display:flex;"><span>bible&gt; search <span style="color:#a5d6ff">&#34;love&#34;</span> Gospel | head -5
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 실시간으로 관련 구절들이 나타나는 것을 보며</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 청년들의 집중도가 확연히 달라졌다</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>청년들의 반응:</strong></p>
+<ul>
+<li>&ldquo;와, 성경이 데이터베이스 같아요!&rdquo;</li>
+<li>&ldquo;이렇게 빠르게 찾을 수 있다니&hellip;&rdquo;</li>
+<li>&ldquo;스마트폰보다 집중이 잘 돼요&rdquo;</li>
+</ul>
+<h3 id="설교-중-실시간-검색"><strong>설교 중 실시간 검색</strong><a hidden class="anchor" aria-hidden="true" href="#설교-중-실시간-검색">#</a></h3>
+<p>설교 도중에도 터미널을 활용:</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 설교 중에 갑자기 관련 구절이 생각날 때</span>
+</span></span><span style="display:flex;"><span>bible&gt; search <span style="color:#a5d6ff">&#34;peace&#34;</span> | grep Jesus
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>즉시 관련 구절을 찾아 회중과 나눌 수 있게 되었다.</p>
+<hr>
+<h2 id="오픈소스-정신과-성경의-만남">오픈소스 정신과 성경의 만남<a hidden class="anchor" aria-hidden="true" href="#오픈소스-정신과-성경의-만남">#</a></h2>
+<p>이 모든 과정에서 깨달은 것은 <strong>오픈소스 정신과 성경의 공통점</strong>이었다.</p>
+<h3 id="무료로-공개된-하나님의-말씀"><strong>무료로 공개된 하나님의 말씀</strong><a hidden class="anchor" aria-hidden="true" href="#무료로-공개된-하나님의-말씀">#</a></h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bible&gt; John 3:16
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 이 명령어로 나오는 구절은 완전히 무료다</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 구독료도, 광고도 없다</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>하나님의 말씀이 **&ldquo;값없이 받았으니 값없이 주라&rdquo;**는 원칙처럼, 터미널의 성경 도구들도 모두 무료로 제공된다.</p>
+<h3 id="투명하고-단순한-접근"><strong>투명하고 단순한 접근</strong><a hidden class="anchor" aria-hidden="true" href="#투명하고-단순한-접근">#</a></h3>
+<p>웹사이트의 복잡한 인터페이스나 상업적 목적이 개입되지 않은, <strong>순수한 텍스트로서의 하나님의 말씀</strong>.</p>
+<h3 id="전-세계-개발자들의-헌신"><strong>전 세계 개발자들의 헌신</strong><a hidden class="anchor" aria-hidden="true" href="#전-세계-개발자들의-헌신">#</a></h3>
+<p>이 CLI 도구들을 만든 개발자들은 <strong>아무런 대가 없이</strong> 하나님의 말씀을 더 쉽게 접할 수 있도록 헌신했다. 이것이야말로 진정한 <strong>디지털 선교</strong>가 아닐까?</p>
+<hr>
+<h2 id="지금도-계속되는-여정">지금도 계속되는 여정<a hidden class="anchor" aria-hidden="true" href="#지금도-계속되는-여정">#</a></h2>
+<p><a href="%EB%A7%81%ED%81%AC">첫 번째 글의 MSX 추억</a>에서 시작되어, <a href="%EB%A7%81%ED%81%AC">두 번째 글의 마크다운 전환</a>을 거쳐, 이제 터미널에서 성경을 읽는 이 세 번째 여정까지.</p>
+<p>모든 것이 하나로 연결되어 있다:</p>
+<ul>
+<li><strong>단순함에 대한 그리움</strong> → 터미널의 검은 화면</li>
+<li><strong>진정한 소유권에 대한 갈망</strong> → 로컬에 저장된 성경 텍스트</li>
+<li><strong>연결된 지식에 대한 열망</strong> → CLI 도구들과 Obsidian의 만남</li>
+<li><strong>복음적 가치와의 일치</strong> → 오픈소스 정신과 &ldquo;값없이 주라&quot;는 말씀</li>
+</ul>
+<hr>
+<h2 id="매일-아침의-고백">매일 아침의 고백<a hidden class="anchor" aria-hidden="true" href="#매일-아침의-고백">#</a></h2>
+<p>이제 매일 아침 터미널을 열며 이렇게 기도한다:</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evan@ubuntu:~$ bible
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bible&gt; random verse
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>어떤 구절이 나올지 모르지만, 그 <strong>검은 화면 위의 하얀 글자</strong>들을 통해 하나님이 오늘 내게 주시는 말씀을 기다린다.</p>
+<p>MSX 앞에서 꿈꿨던 그 순수한 기대감이, 이제는 <strong>하나님의 말씀을 향한 갈망</strong>으로 승화되었다.</p>
+<hr>
+<h2 id="마무리-계속-이어질-이야기">마무리: 계속 이어질 이야기<a hidden class="anchor" aria-hidden="true" href="#마무리-계속-이어질-이야기">#</a></h2>
+<p>이 시리즈는 여기서 끝나지 않는다.</p>
+<p>다음에는 <strong>Git으로 설교문을 버전 관리하는 이야기</strong>, <strong>Hugo로 교회 웹사이트를 만든 경험</strong>, <strong>AI 도구들을 사역에 접목한 시행착오들</strong>&hellip;</p>
+<p>모든 이야기가 하나의 큰 주제로 연결되어 있다:</p>
+<p><strong>&ldquo;기술과 복음이 만나는 지점에서, 어떻게 더 순수하고 효과적으로 하나님을 섬길 것인가?&rdquo;</strong></p>
+<p>MSX에서 시작된 여정이 계속되고 있다. 그리고 이 여정의 끝에는 분명 <strong>더 아름다운 사역의 모습</strong>이 기다리고 있을 것이다.</p>
+<hr>
+<p><em>&ldquo;주의 말씀은 내 발에 등이요 내 길에 빛이니이다&rdquo; (시편 119:105)</em></p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evan@ubuntu:~$ bible Psalm 119:105
+</span></span><span style="display:flex;"><span>Psalm 119:105 - Thy word is a lamp unto my feet, and a light unto my path.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>evan@ubuntu:~$ <span style="color:#8b949e;font-style:italic"># 오늘도 주님의 말씀으로 시작합니다.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>이 글은 Ubuntu 22.04의 터미널에서 vim으로 작성되었으며, bible-kjv와 Obsidian을 연동하여 완성되었습니다. 모든 CLI 도구 설정법과 스크립트는 Creative Commons 라이선스로 공유됩니다.</em></p>
+<hr>
+<p><strong>다음 글 예고</strong>: &ldquo;Git으로 설교문을 버전 관리하는 사역자: 하나님의 말씀도 커밋한다&rdquo;</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/linux-journey/draft_%EC%99%9C-%EB%82%98%EB%8A%94-%EC%84%A4%EA%B5%90%EB%AC%B8%EC%9D%84-/">
+    <span class="title">« 이전 페이지</span>
+    <br>
+    <span></span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on x"
+            href="https://x.com/intent/tweet/?text=&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2flinux-journey%2fdraft_%25ED%2584%25B0%25EB%25AF%25B8%25EB%2584%2590%25EC%2597%2590%25EC%2584%259C-%25EC%2584%25B1%25EA%25B2%25BD%25EC%259D%2584-%25EC%259D%25BD%25EB%258A%2594-%25EC%2582%25AC%25EC%2597%25AD%25EC%259E%2590_cli-%25EB%258F%2584%25EA%25B5%25AC%25EB%25A1%259C-%25EB%25A7%2590%25EC%2594%2580%25EA%25B3%25BC-%25EA%25B0%2580%25EA%25B9%258C%25EC%259B%258C%25EC%25A7%2580%25EA%25B8%25B0%2f&amp;hashtags=">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2flinux-journey%2fdraft_%25ED%2584%25B0%25EB%25AF%25B8%25EB%2584%2590%25EC%2597%2590%25EC%2584%259C-%25EC%2584%25B1%25EA%25B2%25BD%25EC%259D%2584-%25EC%259D%25BD%25EB%258A%2594-%25EC%2582%25AC%25EC%2597%25AD%25EC%259E%2590_cli-%25EB%258F%2584%25EA%25B5%25AC%25EB%25A1%259C-%25EB%25A7%2590%25EC%2594%2580%25EA%25B3%25BC-%25EA%25B0%2580%25EA%25B9%258C%25EC%259B%258C%25EC%25A7%2580%25EA%25B8%25B0%2f&amp;title=&amp;summary=&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2flinux-journey%2fdraft_%25ED%2584%25B0%25EB%25AF%25B8%25EB%2584%2590%25EC%2597%2590%25EC%2584%259C-%25EC%2584%25B1%25EA%25B2%25BD%25EC%259D%2584-%25EC%259D%25BD%25EB%258A%2594-%25EC%2582%25AC%25EC%2597%25AD%25EC%259E%2590_cli-%25EB%258F%2584%25EA%25B5%25AC%25EB%25A1%259C-%25EB%25A7%2590%25EC%2594%2580%25EA%25B3%25BC-%25EA%25B0%2580%25EA%25B9%258C%25EC%259B%258C%25EC%25A7%2580%25EA%25B8%25B0%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2flinux-journey%2fdraft_%25ED%2584%25B0%25EB%25AF%25B8%25EB%2584%2590%25EC%2597%2590%25EC%2584%259C-%25EC%2584%25B1%25EA%25B2%25BD%25EC%259D%2584-%25EC%259D%25BD%25EB%258A%2594-%25EC%2582%25AC%25EC%2597%25AD%25EC%259E%2590_cli-%25EB%258F%2584%25EA%25B5%25AC%25EB%25A1%259C-%25EB%25A7%2590%25EC%2594%2580%25EA%25B3%25BC-%25EA%25B0%2580%25EA%25B9%258C%25EC%259B%258C%25EC%25A7%2580%25EA%25B8%25B0%2f&title=">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2flinux-journey%2fdraft_%25ED%2584%25B0%25EB%25AF%25B8%25EB%2584%2590%25EC%2597%2590%25EC%2584%259C-%25EC%2584%25B1%25EA%25B2%25BD%25EC%259D%2584-%25EC%259D%25BD%25EB%258A%2594-%25EC%2582%25AC%25EC%2597%25AD%25EC%259E%2590_cli-%25EB%258F%2584%25EA%25B5%25AC%25EB%25A1%259C-%25EB%25A7%2590%25EC%2594%2580%25EA%25B3%25BC-%25EA%25B0%2580%25EA%25B9%258C%25EC%259B%258C%25EC%25A7%2580%25EA%25B8%25B0%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on whatsapp"
+            href="https://api.whatsapp.com/send?text=%20-%20http%3a%2f%2flocalhost%3a1313%2fposts%2flinux-journey%2fdraft_%25ED%2584%25B0%25EB%25AF%25B8%25EB%2584%2590%25EC%2597%2590%25EC%2584%259C-%25EC%2584%25B1%25EA%25B2%25BD%25EC%259D%2584-%25EC%259D%25BD%25EB%258A%2594-%25EC%2582%25AC%25EC%2597%25AD%25EC%259E%2590_cli-%25EB%258F%2584%25EA%25B5%25AC%25EB%25A1%259C-%25EB%25A7%2590%25EC%2594%2580%25EA%25B3%25BC-%25EA%25B0%2580%25EA%25B9%258C%25EC%259B%258C%25EC%25A7%2580%25EA%25B8%25B0%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on telegram"
+            href="https://telegram.me/share/url?text=&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2flinux-journey%2fdraft_%25ED%2584%25B0%25EB%25AF%25B8%25EB%2584%2590%25EC%2597%2590%25EC%2584%259C-%25EC%2584%25B1%25EA%25B2%25BD%25EC%259D%2584-%25EC%259D%25BD%25EB%258A%2594-%25EC%2582%25AC%25EC%2597%25AD%25EC%259E%2590_cli-%25EB%258F%2584%25EA%25B5%25AC%25EB%25A1%259C-%25EB%25A7%2590%25EC%2594%2580%25EA%25B3%25BC-%25EA%25B0%2580%25EA%25B9%258C%25EC%259B%258C%25EC%25A7%2580%25EA%25B8%25B0%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=&u=http%3a%2f%2flocalhost%3a1313%2fposts%2flinux-journey%2fdraft_%25ED%2584%25B0%25EB%25AF%25B8%25EB%2584%2590%25EC%2597%2590%25EC%2584%259C-%25EC%2584%25B1%25EA%25B2%25BD%25EC%259D%2584-%25EC%259D%25BD%25EB%258A%2594-%25EC%2582%25AC%25EC%2597%25AD%25EC%259E%2590_cli-%25EB%258F%2584%25EA%25B5%25AC%25EB%25A1%259C-%25EB%25A7%2590%25EC%2594%2580%25EA%25B3%25BC-%25EA%25B0%2580%25EA%25B9%258C%25EC%259B%258C%25EC%25A7%2580%25EA%25B8%25B0%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Evan의 사역 여정</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '복사';
+
+        function copyingDone() {
+            copybutton.innerHTML = '복사 완료!';
+            setTimeout(() => {
+                copybutton.innerHTML = '복사';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

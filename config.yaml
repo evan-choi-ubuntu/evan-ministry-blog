@@ -8,14 +8,16 @@ defaultContentLanguage: 'ko'
 languages:
   ko:
     title: 'Evan의 사역 여정'
-    subtitle: '복음과 기술이 만나는 곳'
     weight: 1
     languageName: '한국어'
+    params:
+      subtitle: '복음과 기술이 만나는 곳'
   en:
     title: "Evan's Ministry Journey"
-    subtitle: 'Where Gospel Meets Technology'
     weight: 2
     languageName: 'English'
+    params:
+      subtitle: 'Where Gospel Meets Technology'
 
 # 메뉴 구성
 menu:
