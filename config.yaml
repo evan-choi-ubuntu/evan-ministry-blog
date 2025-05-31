@@ -1,0 +1,132 @@
+baseURL: 'https://yourusername.github.io'
+languageCode: 'ko'
+title: 'Evan의 사역 여정'
+theme: 'PaperMod'
+
+# 다국어 설정
+defaultContentLanguage: 'ko'
+languages:
+  ko:
+    title: 'Evan의 사역 여정'
+    subtitle: '복음과 기술이 만나는 곳'
+    weight: 1
+    languageName: '한국어'
+  en:
+    title: "Evan's Ministry Journey"
+    subtitle: 'Where Gospel Meets Technology'
+    weight: 2
+    languageName: 'English'
+
+# 메뉴 구성
+menu:
+  main:
+    - name: "리눅스여정"
+      url: "/categories/linux-journey/"
+      weight: 10
+    - name: "추억발굴"
+      url: "/categories/memories/"
+      weight: 20
+    - name: "독서서평"
+      url: "/categories/book-reviews/"
+      weight: 30
+    - name: "설교문"
+      url: "/categories/sermons/"
+      weight: 40
+    - name: "성경교회사"
+      url: "/categories/bible-studies/"
+      weight: 50
+    - name: "삶의이야기"
+      url: "/categories/life-stories/"
+      weight: 60
+    - name: "소개"
+      url: "/about/"
+      weight: 70
+
+# PaperMod 테마 설정
+params:
+  env: production
+  title: "Evan의 사역 여정"
+  description: "복음과 기술이 만나는 곳, 한 목사의 성장 기록"
+  keywords: [Blog, Ministry, Linux, Ubuntu, Technology, Gospel, 사역, 목회]
+  author: "Evan 목사"
+  
+  # 외관 설정
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  # 홈페이지 설정
+  homeInfoParams:
+    Title: "환영합니다 🙏"
+    Content: |
+      **복음과 기술이 만나는 곳**
+      
+      리눅스로 전환한 목사의 신앙적 여정과 기술적 성장을 기록합니다.
+      이곳은 저의 성장을 위한 공간이며, 동시에 삶의 족적을 남기는 곳입니다.
+
+  # 소셜 링크
+  socialIcons:
+    - name: github
+      url: "https://github.com/yourusername"
+    - name: email
+      url: "mailto:baptist0827@protonmail.com"
+    - name: rss
+      url: "/index.xml"
+
+  # 검색 기능 활성화
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 1
+    keys: ["title", "permalink", "summary", "content"]
+
+# 출력 형식
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# 마크다운 설정
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github-dark
+    lineNos: true
+    codeFences: true
+    guessSyntax: true
+
+# 분류 설정
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+# 빌드 설정
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# 기타 설정
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true

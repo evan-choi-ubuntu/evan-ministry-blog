@@ -1,0 +1,124 @@
+/* Noto Serif KR 폰트 로딩 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&display=swap');
+
+:root {
+    /* Dan Hillier 스타일 다크 테마 */
+    --theme: #1a1a1a;
+    --entry: #2a2a2a;
+    --primary: #e6e6e6;
+    --secondary: #999999;
+    --tertiary: #d4c4a8;
+    --content: #e6e6e6;
+    --hljs-bg: #2a2a2a;
+    --code-bg: #2a2a2a;
+    --border: #333333;
+    --fill: rgba(255, 255, 255, 0.1);
+}
+
+/* 전체 폰트 설정 */
+body {
+    font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', '나눔고딕', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: var(--primary);
+    font-weight: 400;
+}
+
+/* 제목 폰트 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+    font-weight: 500;
+    color: var(--tertiary);
+}
+
+/* 본문 텍스트 */
+.post-content {
+    font-weight: 400;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* 포스트 카드 스타일 */
+.post-entry {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(212, 196, 168, 0.15);
+}
+
+/* 헤더 스타일 */
+.header {
+    background: var(--theme);
+    border-bottom: 1px solid var(--border);
+}
+
+/* 메뉴 스타일 */
+.menu a {
+    color: var(--primary);
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: var(--tertiary);
+}
+
+/* 홈페이지 인트로 */
+.home-info {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.home-info h1 {
+    color: var(--tertiary);
+    margin-bottom: 16px;
+}
+
+/* 카테고리 배지 */
+.entry-header .entry-hint {
+    background: var(--tertiary);
+    color: var(--theme);
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* 반응형 폰트 크기 */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .post-content {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+/* 코드 블록 스타일 */
+.highlight pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* 인용구 스타일 */
+blockquote {
+    border-left: 4px solid var(--tertiary);
+    background: rgba(212, 196, 168, 0.05);
+    padding: 16px 24px;
+    margin: 24px 0;
+    font-style: italic;
+}
